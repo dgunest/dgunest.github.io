@@ -1,7 +1,7 @@
 /* ===== 팔레트 & 토큰 ===== */
 :root{
   --navy:#293681; --blue:#4274D9; --sky:#95CCDD; --tint:#D0E7E6;
-  --ink:#3a4460; --muted:#7581a0; --line:#e9edf5; --bg:#eef2f8;
+  --ink:#3a4460; --muted:#7581a0; --line:#e9edf5; --bg:#e6ecf5;
   --maxw:1100px; --radius:10px;
   --shadow:0 8px 30px rgba(41,54,129,.10);
   --font:"Pretendard","Noto Sans KR",-apple-system,"Segoe UI",sans-serif;
@@ -18,7 +18,7 @@ h1,h2,h3{color:var(--navy);line-height:1.25}
 .page-title{font-size:30px;font-weight:800;margin-bottom:24px}
 
 /* ===== 헤더 ===== */
-.site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);
+.site-header{position:sticky;top:0;z-index:50;background:rgba(230,236,245,.88);
   backdrop-filter:blur(6px);border-bottom:1px solid var(--line);transition:box-shadow .25s}
 .site-header.scrolled{box-shadow:0 4px 18px rgba(41,54,129,.08)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
