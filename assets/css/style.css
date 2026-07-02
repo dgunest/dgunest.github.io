@@ -28,7 +28,7 @@ h1,h2,h3{color:var(--navy);line-height:1.25}
 .menu>li{position:relative;list-style:none}
 .menu a{color:var(--ink);padding:6px 0;transition:color .15s}
 .menu a:hover,.menu a.active{color:var(--navy);font-weight:700}
-.menu a.active{border-bottom:2px solid var(--blue)}
+.menu a.active:not(.btn-contact){border-bottom:2px solid var(--blue)}
 .btn-contact{background:var(--blue);color:#fff!important;padding:8px 16px;border-radius:8px;font-weight:600}
 .btn-contact:hover{background:var(--navy)}
 .caret{font-size:10px;margin-left:3px;color:var(--muted)}
