@@ -33,7 +33,7 @@ lab-website/
 ├─ assets/
 │  ├─ css/style.css      # 전체 스타일 + 반응형 + 애니메이션
 │  ├─ js/main.js         # include 주입 + 메뉴/드롭다운/스크롤/reveal
-│  └─ img/               # 로고·연구·갤러리 이미지(현재는 비어 있음, 더미 자리표시자 사용 중)
+│  └─ img/               # 이미지 (favicon.svg = 탭 마크, people/·research/·gallery/ 하위 폴더)
 ├─ .nojekyll             # GitHub Pages가 Jekyll 처리 안 하게
 ├─ .gitignore
 └─ README.md             # 이 문서
@@ -92,6 +92,21 @@ lab-website/
 1. `assets/img/`에 파일을 넣습니다.
 2. 자리표시자 `<div class="ph">…</div>`를 `<img src="assets/img/파일명" alt="설명">`로 바꿉니다.
 
+### 한/영 이중언어 (KOR/ENG 토글)
+상단 오른쪽 `ENG/KOR` 버튼으로 언어를 전환합니다 (선택은 브라우저에 기억됨).
+
+- **원리**: `<html lang="ko">`가 기본. 번역이 필요한 곳은 한/영 텍스트를 **함께** 넣고, CSS가
+  현재 언어에 맞는 쪽만 보여줍니다.
+- **새 문구를 이중언어로 넣는 법**: 한글과 영문을 각각 span으로 감쌉니다.
+
+  ```html
+  <span class="lang-ko">한국어 문장</span><span class="lang-en">English sentence</span>
+  ```
+
+- 이미 영어인 것(메뉴, `RESEARCH AREAS` 같은 라벨, 직급, 구성원 이름 등)은 감싸지 않아도 됩니다.
+- 토글 버튼·로직은 `partials/header.html`의 `.lang-toggle`와 `assets/js/main.js`에 있습니다.
+  자세한 전체 번역 목록은 `docs/superpowers/plans/2026-07-02-nest-lab-i18n.md` 참고.
+
 ## 로컬 미리보기
 
 VS Code Remote-SSH로 서버에 접속해 작업하는 환경 기준입니다.
@@ -122,5 +137,6 @@ git push
 ## LLM 안내 블록
 
 이 저장소를 수정하는 AI에게: 메뉴는 `partials/header.html`, 색은 `style.css`의 `:root`,
-콘텐츠는 각 html의 `<main>`. 새 항목은 기존 마크업 패턴을 복사해 추가할 것. 절대 파일 구조나
-클래스명을 임의로 변경하지 말 것.
+콘텐츠는 각 html의 `<main>`. 새 항목은 기존 마크업 패턴을 복사해 추가할 것. 새로 넣는 한글 문구는
+한/영을 각각 `<span class="lang-ko">…</span><span class="lang-en">…</span>`로 감쌀 것. 절대 파일
+구조나 클래스명(`.lang-ko`/`.lang-en` 포함)을 임의로 변경하지 말 것.
