@@ -1,7 +1,7 @@
 /* ===== 팔레트 & 토큰 ===== */
 :root{
   --navy:#293681; --blue:#4274D9; --sky:#95CCDD; --tint:#D0E7E6;
-  --ink:#3a4460; --muted:#7581a0; --line:#e9edf5; --bg:#ffffff;
+  --ink:#3a4460; --muted:#7581a0; --line:#e9edf5; --bg:#eef2f8;
   --maxw:1100px; --radius:10px;
   --shadow:0 8px 30px rgba(41,54,129,.10);
   --font:"Pretendard","Noto Sans KR",-apple-system,"Segoe UI",sans-serif;
@@ -28,9 +28,9 @@ h1,h2,h3{color:var(--navy);line-height:1.25}
 .menu>li{position:relative;list-style:none}
 .menu a{color:var(--ink);padding:6px 0;transition:color .15s}
 .menu a:hover,.menu a.active{color:var(--navy);font-weight:700}
-.menu a.active:not(.btn-contact){border-bottom:2px solid var(--blue)}
-.btn-contact{background:var(--blue);color:#fff!important;padding:8px 16px;border-radius:8px;font-weight:600}
-.btn-contact:hover{background:var(--navy)}
+.menu a.active{border-bottom:2px solid var(--blue)}
+.nav-icon{width:16px;height:16px;vertical-align:-3px;margin-right:5px;stroke:var(--blue)}
+.menu a:hover .nav-icon,.menu a.active .nav-icon{stroke:var(--navy)}
 .caret{font-size:10px;margin-left:3px;color:var(--muted)}
 
 /* 드롭다운 (데스크톱: hover) */
@@ -46,7 +46,7 @@ h1,h2,h3{color:var(--navy);line-height:1.25}
 .hamburger span{width:24px;height:2px;background:var(--navy);transition:.25s}
 
 /* ===== 히어로 ===== */
-.hero{background:linear-gradient(135deg,var(--tint),#eaf4f4 55%,#fff);padding:64px 0 48px}
+.hero{background:linear-gradient(135deg,var(--tint),#eaf4f4 55%,var(--bg));padding:64px 0 48px}
 .hero .eyebrow{color:var(--blue);font-weight:700;letter-spacing:1.5px;font-size:13px}
 .hero h1{font-size:36px;font-weight:800;margin:12px 0}
 .hero p{max-width:620px;color:var(--ink);font-size:16px}
@@ -125,7 +125,6 @@ h1,h2,h3{color:var(--navy);line-height:1.25}
   .menu.open{max-height:80vh;overflow:auto}
   .menu>li{padding:0 24px}
   .menu>li>a{display:block;padding:12px 0}
-  .btn-contact{display:inline-block;margin:8px 0}
   .dropdown>.submenu{position:static;opacity:1;visibility:visible;transform:none;
     box-shadow:none;border:0;padding:0 0 6px 12px;display:none}
   .dropdown.open>.submenu{display:block}
