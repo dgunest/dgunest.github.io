@@ -41,6 +41,17 @@ function initNav(){
   // 스크롤 시 그림자
   const onScroll = ()=> header.classList.toggle('scrolled', window.scrollY > 8);
   window.addEventListener('scroll', onScroll); onScroll();
+
+  // 언어 전환 토글
+  const langBtn = document.querySelector('.lang-toggle');
+  function syncLangBtn(){ langBtn && (langBtn.textContent = document.documentElement.lang === 'en' ? 'KOR' : 'ENG'); }
+  syncLangBtn();
+  langBtn && langBtn.addEventListener('click', ()=>{
+    const next = document.documentElement.lang === 'en' ? 'ko' : 'en';
+    document.documentElement.lang = next;
+    localStorage.setItem('lang', next);
+    syncLangBtn();
+  });
 }
 
 function initReveal(){
@@ -52,6 +63,7 @@ function initReveal(){
 }
 
 document.addEventListener('DOMContentLoaded', async ()=>{
+  document.documentElement.lang = localStorage.getItem('lang') || 'ko';
   try{
     await inject('site-header','partials/header.html');
     await inject('site-footer','partials/footer.html');

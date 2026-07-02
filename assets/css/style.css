@@ -136,3 +136,10 @@ h1,h2,h3{color:var(--navy);line-height:1.25}
   .contact-grid{grid-template-columns:1fr}
   .hero h1{font-size:28px}
 }
+
+/* ===== 언어 전환 (KOR/ENG) ===== */
+html[lang="en"] .lang-ko{display:none}
+html[lang="ko"] .lang-en{display:none}
+.lang-toggle{margin-left:4px;background:none;border:1px solid var(--line);color:var(--navy);
+  font-weight:700;font-size:12px;padding:6px 10px;border-radius:7px;cursor:pointer;font-family:inherit;line-height:1}
+.lang-toggle:hover{background:var(--tint)}
