@@ -105,6 +105,9 @@ h1,h2,h3{color:var(--navy);line-height:1.25}
 .contact-grid .k{font-size:12px;color:var(--muted);letter-spacing:1px}
 .contact-grid .v{font-size:15px;color:var(--navy);font-weight:600}
 .map-ph{background:var(--tint);border-radius:10px;min-height:240px;display:flex;align-items:center;justify-content:center;color:var(--blue)}
+.map{width:100%;min-height:300px;border:0;border-radius:10px;display:block}
+.map-link{display:inline-block;margin-top:10px;color:var(--blue);font-weight:600;font-size:13px}
+.contact-grid .v a{color:var(--blue)}
 
 /* ===== 푸터 ===== */
 .site-footer{background:var(--navy);color:#bcc6ea;font-size:13px}
