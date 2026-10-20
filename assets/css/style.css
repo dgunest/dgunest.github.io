@@ -89,6 +89,8 @@ h1,h2,h3{color:var(--navy);line-height:1.25}
 .list{list-style:none}
 .list li{padding:14px 0;border-bottom:1px solid var(--line);font-size:14px}
 .list .year{color:var(--blue);font-weight:700;margin-right:10px}
+.list a{color:var(--navy)}
+.list a:hover{text-decoration:underline}
 
 /* ===== Gallery ===== */
 .gyear{font-size:26px;font-weight:800;margin:8px 0 20px}
