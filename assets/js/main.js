@@ -62,6 +62,15 @@ function initReveal(){
   els.forEach(el=>io.observe(el));
 }
 
+// 갤러리 사진 넘기기 (모바일 스와이프는 CSS scroll-snap이 처리, 버튼은 PC용)
+function initSlides(){
+  document.querySelectorAll('.slides').forEach(s=>{
+    const track = s.querySelector('.track');
+    s.querySelector('.prev').addEventListener('click', ()=> track.scrollBy({left:-track.clientWidth, behavior:'smooth'}));
+    s.querySelector('.next').addEventListener('click', ()=> track.scrollBy({left:track.clientWidth, behavior:'smooth'}));
+  });
+}
+
 document.addEventListener('DOMContentLoaded', async ()=>{
   document.documentElement.lang = localStorage.getItem('lang') || 'ko';
   try{
@@ -73,4 +82,5 @@ document.addEventListener('DOMContentLoaded', async ()=>{
   // 헤더가 실제로 주입됐을 때만 내비 초기화, reveal은 항상 시도
   if(document.querySelector('.site-header')) initNav();
   initReveal();
+  initSlides();
 });
