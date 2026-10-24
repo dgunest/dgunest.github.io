@@ -84,8 +84,9 @@ h1,h2,h3{color:var(--navy);line-height:1.25}
   border-radius:999px;color:var(--blue);font-size:11px;font-weight:600;letter-spacing:.5px}
 .intro{font-size:15px;margin:0 0 8px}
 /* 그림 줄: img마다 style="--ar:가로/세로" → 한 줄의 그림 높이가 같아지고, 좁은 화면에선 줄바꿈 */
-.thumbs{display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start}
+.thumbs{display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start;justify-content:center}
 .thumbs img{flex:var(--ar) 1 calc(var(--ar) * 200px);min-width:0;height:auto;max-height:420px;
+  max-width:calc(var(--ar) * 420px);  /* 높이 420 상한에 맞춰 폭도 줄임 → 좌우 흰 띠 없음 */
   object-fit:contain;background:#fff;border-radius:8px}
 
 /* ===== People ===== */
