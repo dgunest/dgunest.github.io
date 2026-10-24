@@ -65,6 +65,13 @@ h1,h2,h3{color:var(--navy);line-height:1.25}
 .card h3{font-size:16px;margin-bottom:6px}
 .card p{font-size:13px;color:var(--ink);flex:1}
 .card .more{margin-top:12px;font-size:13px;font-weight:600;color:var(--blue)}
+/* Home 모집 공고 */
+.recruit{background:var(--tint);border-radius:var(--radius);padding:28px 32px}
+.recruit h2{font-size:22px;margin:6px 0 10px}
+.recruit p{font-size:14px;max-width:820px}
+.recruit dl{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;margin:16px 0 20px;font-size:14px}
+.recruit dt{font-weight:700;color:var(--navy)}
+.recruit .actions{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center}
 
 /* 연구 주제 상세 (WET/DRY 파트 > 주제별 설명 + 그림) */
 .part{padding:40px 0 8px}
@@ -153,6 +160,9 @@ h1,h2,h3{color:var(--navy);line-height:1.25}
   .grid-3,.gallery{grid-template-columns:1fr}
   .members{grid-template-columns:repeat(2,1fr)}
   .contact-grid{grid-template-columns:1fr}
+  .recruit{padding:22px 20px}
+  .recruit dl{grid-template-columns:1fr;gap:2px}
+  .recruit dd{margin-bottom:8px}
   .hero h1{font-size:28px}
 }
 
