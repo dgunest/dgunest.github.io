@@ -80,6 +80,9 @@ h1,h2,h3{color:var(--navy);line-height:1.25}
 .part .desc,.topic .desc{color:var(--ink);font-size:14px;margin:6px 0 16px;max-width:760px}
 .topic{padding:28px 0;border-top:1px solid var(--line)}
 .topic h3{font-size:20px}
+.topic .tag{display:inline-block;vertical-align:middle;margin-left:8px;padding:2px 10px;border:1px solid var(--blue);
+  border-radius:999px;color:var(--blue);font-size:11px;font-weight:600;letter-spacing:.5px}
+.intro{font-size:15px;margin:0 0 8px}
 /* 그림 줄: img마다 style="--ar:가로/세로" → 한 줄의 그림 높이가 같아지고, 좁은 화면에선 줄바꿈 */
 .thumbs{display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start}
 .thumbs img{flex:var(--ar) 1 calc(var(--ar) * 200px);min-width:0;height:auto;max-height:420px;
